@@ -1,0 +1,44 @@
+:root {
+  --gradient: linear-gradient(43deg, #4158d0 0%, #c850c0 46%, #ffcc70 100%);
+  --gradient2: linear-gradient(
+    89.9deg,
+    rgba(255, 243, 110, 1) 16.9%,
+    rgba(30, 204, 214, 1) 55.1%,
+    rgba(5, 54, 154, 1) 90.7%
+  );
+}
+
+body {
+  font-family: "Lilita One", cursive;
+  min-height: 100vh;
+  background-color: #4158d0;
+  background-image: var(--gradient);
+  background-size: 200%;
+  animation: gradient-animation 15s infinite alternate;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-size: 8rem;
+  text-align: center;
+  letter-spacing: 2rem;
+  background-image: var(--gradient2);
+  background-size: 200%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  filter: drop-shadow(3px 3px 3px rgb(0, 0, 0, 0.7));
+  animation: gradient-animation 5s infinite alternate;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: left;
+  }
+
+  100% {
+    background-position: right;
+  }
+}
